@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/dataSources/
+.idea/inspectionProfiles/
+src/main/resources/
+target/generated-sources/
+target/generated-test-sources/
