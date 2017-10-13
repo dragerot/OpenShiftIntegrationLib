@@ -1,0 +1,28 @@
+package no.openeshift.integration;
+
+import io.fabric8.kubernetes.client.Config;
+import io.fabric8.kubernetes.client.ConfigBuilder;
+import io.fabric8.openshift.client.DefaultOpenShiftClient;
+import io.fabric8.openshift.client.OpenShiftClient;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+
+@Configuration
+public class OpenShiftConfig {
+    public static final String HOST_URL="https://api.starter-ca-central-1.openshift.com";
+
+    @Bean
+    public OpenShiftClient createKubernetesClient(){
+        Config config= new ConfigBuilder()
+                .withMasterUrl(HOST_URL)
+                //.withOauthToken("796054b3-af56-11e7-ba53-02ec8e61afcf")
+                .withUsername("dragerot@gmail.com")
+                .withPassword("heiw442").build();
+
+        OpenShiftClient client = new DefaultOpenShiftClient(config);
+        return client;
+    }
+
+
+}
