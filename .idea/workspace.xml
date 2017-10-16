@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40c312a7-2242-453d-8343-b89639e8cb65" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SERVICE.uml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/openeshift/integration/CloudImpl.class" afterPath="$PROJECT_DIR$/target/classes/no/openeshift/integration/CloudImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/no/openshift/integration/TestEtt.class" afterPath="$PROJECT_DIR$/target/test-classes/no/openshift/integration/TestEtt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/OpenShiftIntegrationLib.iml" afterPath="$PROJECT_DIR$/.idea/OpenShiftIntegrationLib.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java" afterPath="$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,126 +38,26 @@
         <item name="@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="SYSTEM" type="e3449647:DbNodeDescriptor" />
       </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="SYSTEM" type="e3449647:DbNodeDescriptor" />
-        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
-      </path>
     </expand>
     <select />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="DATABASE/38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.SERVICE" pinned="false" current-in-tab="true">
-              <entry file="uml://DATABASE/38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.SERVICE">
-                <provider selected="true" editor-type-id="UmlEditorProvider">
-                  <state>
-                    <ID>DATABASE</ID>
-                    <OriginalElement>38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.SERVICE</OriginalElement>
-                    <nodes>
-                      <node x="553.0" y="1035.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.IKTSYSTEMER</node>
-                      <node x="277.0" y="1035.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INSTILLINGER</node>
-                      <node x="306.46527777777777" y="495.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.LOGGTYPE</node>
-                      <node x="0.0" y="286.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INCOMINGQUEUE</node>
-                      <node x="513.4652777777778" y="286.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.OUTGOINGQUEUE</node>
-                      <node x="0.0" y="1035.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.DELIVERYREPORT</node>
-                      <node x="499.19444444444446" y="828.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.UTLOGG</node>
-                      <node x="11.756944444444457" y="0.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.SERVICE</node>
-                      <node x="410.69444444444446" y="66.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.STATUS</node>
-                      <node x="117.22916666666669" y="828.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INGAAENDELOGG</node>
-                      <node x="824.0" y="1035.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.OUTGOINGCONSUMERTRACKER</node>
-                      <node x="843.4722222222222" y="0.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.BESTILLINGER</node>
-                    </nodes>
-                    <notes />
-                    <edges>
-                      <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.OUTGOINGQUEUE" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.STATUS">
-                        <point x="56.75" y="-246.0" />
-                        <point x="683.7152777777778" y="236.0" />
-                        <point x="527.5694444444445" y="236.0" />
-                        <point x="23.375" y="37.0" />
-                      </edge>
-                      <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INCOMINGQUEUE" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.SERVICE">
-                        <point x="-56.75" y="-246.0" />
-                        <point x="56.75" y="266.0" />
-                        <point x="77.00694444444446" y="266.0" />
-                        <point x="-65.25" y="103.0" />
-                      </edge>
-                      <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INGAAENDELOGG" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.STATUS">
-                        <point x="0.0" y="-81.0" />
-                        <point x="229.72916666666669" y="803.0" />
-                        <point x="295.96527777777777" y="803.0" />
-                        <point x="295.96527777777777" y="266.0" />
-                        <point x="480.81944444444446" y="266.0" />
-                        <point x="-23.375" y="37.0" />
-                      </edge>
-                      <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INGAAENDELOGG" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INCOMINGQUEUE">
-                        <point x="-75.0" y="-81.0" />
-                        <point x="154.72916666666669" y="803.0" />
-                        <point x="113.5" y="803.0" />
-                        <point x="0.0" y="246.0" />
-                      </edge>
-                      <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.UTLOGG" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.STATUS">
-                        <point x="76.0" y="-81.0" />
-                        <point x="689.1944444444445" y="803.0" />
-                        <point x="759.9722222222222" y="803.0" />
-                        <point x="759.9722222222222" y="226.0" />
-                        <point x="574.3194444444445" y="226.0" />
-                        <point x="70.12500000000001" y="37.0" />
-                      </edge>
-                      <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.OUTGOINGQUEUE" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.SERVICE">
-                        <point x="-56.75" y="-246.0" />
-                        <point x="570.2152777777778" y="246.0" />
-                        <point x="207.50694444444446" y="246.0" />
-                        <point x="65.25" y="103.0" />
-                      </edge>
-                      <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.UTLOGG" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.LOGGTYPE">
-                        <point x="-76.0" y="-81.0" />
-                        <point x="537.1944444444445" y="803.0" />
-                        <point x="446.71527777777777" y="803.0" />
-                        <point x="46.75" y="37.0" />
-                      </edge>
-                      <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INCOMINGQUEUE" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.STATUS">
-                        <point x="56.75" y="-246.0" />
-                        <point x="170.25" y="256.0" />
-                        <point x="434.06944444444446" y="256.0" />
-                        <point x="-70.125" y="37.0" />
-                      </edge>
-                      <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INGAAENDELOGG" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.LOGGTYPE">
-                        <point x="75.0" y="-81.0" />
-                        <point x="304.7291666666667" y="803.0" />
-                        <point x="353.21527777777777" y="803.0" />
-                        <point x="-46.75" y="37.0" />
-                      </edge>
-                      <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.UTLOGG" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.OUTGOINGQUEUE">
-                        <point x="0.0" y="-81.0" />
-                        <point x="613.1944444444445" y="803.0" />
-                        <point x="626.9652777777778" y="803.0" />
-                        <point x="0.0" y="246.0" />
-                      </edge>
-                    </edges>
-                    <settings layout="Hierarchic Group" zoom="1.0" x="87.0" y="448.0" />
-                    <SelectedNodes>
-                      <node>38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.SERVICE</node>
-                    </SelectedNodes>
-                    <Categories>
-                      <Category>Key columns</Category>
-                      <Category>Columns</Category>
-                    </Categories>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="TestEtt.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="50" column="6" lean-forward="false" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1300#1301#0" expanded="true" />
+                <element signature="e#1329#1330#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -172,13 +77,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java" />
-        <option value="$PROJECT_DIR$/src/main/java/no/openeshift/integration/OpenShiftConfig.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/no/openeshift/integration/CloudImpl.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/38dcba8c-99a5-4370-bd0a-3e0b8832ff9a/console.sql" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/resources/sql/schema.sql" />
+        <option value="$MAVEN_REPOSITORY$/io/fabric8/openshift-client/3.0.0/openshift-client-3.0.0.jar!/io/fabric8/openshift/client/OpenShiftClient.class" />
+        <option value="$PROJECT_DIR$/src/main/java/no/openeshift/integration/OpenShiftConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java" />
       </list>
     </option>
   </component>
@@ -200,15 +106,20 @@
           <item name="OpenShiftIntegrationLib" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="OpenShiftIntegrationLib" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
       </expand>
       <select />
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="134" />
-    <option name="y" value="8" />
-    <option name="width" value="1274" />
-    <option name="height" value="825" />
+    <option name="x" value="32" />
+    <option name="y" value="25" />
+    <option name="width" value="961" />
+    <option name="height" value="793" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -226,8 +137,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -251,7 +160,30 @@
               <item name="OpenShiftIntegrationLib" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OpenShiftIntegrationLib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OpenShiftIntegrationLib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="integration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OpenShiftIntegrationLib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OpenShiftIntegrationLib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OpenShiftIntegrationLib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OpenShiftIntegrationLib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OpenShiftIntegrationLib" type="b2602c69:ProjectViewProjectNode" />
@@ -272,13 +204,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../techpros" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.github.tinselspoon.intellij.kubernetes.config.KubernetesConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -286,6 +220,11 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Oracle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\code\openshift\OpenShiftIntegrationLib\src\main\resources\sql" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -432,65 +371,124 @@
       <workItem from="1507847933351" duration="683000" />
       <workItem from="1507881889449" duration="2131000" />
       <workItem from="1507884071389" duration="953000" />
-      <workItem from="1507889149832" duration="5283000" />
+      <workItem from="1507889149832" duration="7188000" />
+      <workItem from="1508005861251" duration="1311000" />
+      <workItem from="1508010810857" duration="1347000" />
+      <workItem from="1508012211772" duration="12167000" />
+      <workItem from="1508142785024" duration="11000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestEtt - 2017.10.13 at 00h 48m 51s.xml">
+    <history-entry file="TestEtt - 2017.10.15 at 01h 25m 31s.xml">
       <configuration name="TestEtt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestEtt - 2017.10.13 at 00h 49m 45s.xml">
+    <history-entry file="TestEtt - 2017.10.15 at 01h 26m 30s.xml">
       <configuration name="TestEtt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestEtt - 2017.10.13 at 10h 46m 02s.xml">
+    <history-entry file="TestEtt - 2017.10.15 at 01h 29m 21s.xml">
       <configuration name="TestEtt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestEtt - 2017.10.13 at 10h 50m 08s.xml">
+    <history-entry file="TestEtt - 2017.10.15 at 01h 32m 07s.xml">
+      <configuration name="TestEtt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestEtt - 2017.10.16 at 00h 11m 44s.xml">
+      <configuration name="TestEtt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestEtt - 2017.10.16 at 00h 12m 00s.xml">
+      <configuration name="TestEtt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestEtt - 2017.10.16 at 00h 18m 03s.xml">
+      <configuration name="TestEtt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestEtt - 2017.10.16 at 00h 20m 58s.xml">
+      <configuration name="TestEtt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestEtt - 2017.10.16 at 00h 22m 19s.xml">
+      <configuration name="TestEtt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestEtt - 2017.10.16 at 00h 22m 57s.xml">
       <configuration name="TestEtt" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9050000" />
+    <option name="totallyTimeSpent" value="25791000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="134" y="8" width="1274" height="825" extended-state="0" />
+    <frame x="32" y="25" width="961" height="793" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33465818" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298887" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Notes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23837209" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14814815" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34246576" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994187" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.068214804" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21860096" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2635135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26137567" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968035" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Notes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3994528" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32848838" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33028919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968536" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.068214804" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08096886" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968035" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Notes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32831737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38030097" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2635135" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.068214804" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15017301" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -503,15 +501,50 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java</url>
-          <line>17</line>
+          <line>16</line>
           <properties />
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1329#1330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1329#1330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/openeshift/integration/OpenShiftConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="68" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
@@ -524,7 +557,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -533,7 +568,9 @@
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1329#1330#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -542,10 +579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-          <folding>
-            <element signature="e#222#223#0" expanded="false" />
-            <element signature="e#276#277#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -561,7 +594,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -576,7 +611,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -593,7 +630,9 @@
         <state relative-caret-position="187">
           <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1329#1330#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -605,40 +644,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="21" lean-forward="false" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/openeshift/integration/OpenShiftConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/no/openeshift/integration/CloudImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#222#223#0" expanded="false" />
-            <element signature="e#276#277#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -855,12 +864,13 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="0.1" x="2542.0101694915247" y="2823.423728813559" />
+          <settings layout="Hierarchic Group" zoom="0.1" x="2542.0" y="2823.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Key columns</Category>
             <Category>Columns</Category>
+            <Category>Key columns</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -868,7 +878,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/38dcba8c-99a5-4370-bd0a-3e0b8832ff9a/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="179" column="1" lean-forward="true" selection-start-line="179" selection-start-column="1" selection-end-line="179" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -878,110 +901,90 @@
           <ID>DATABASE</ID>
           <OriginalElement>38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.SERVICE</OriginalElement>
           <nodes>
-            <node x="553.0" y="1035.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.IKTSYSTEMER</node>
-            <node x="277.0" y="1035.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INSTILLINGER</node>
-            <node x="306.46527777777777" y="495.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.LOGGTYPE</node>
-            <node x="0.0" y="286.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INCOMINGQUEUE</node>
-            <node x="513.4652777777778" y="286.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.OUTGOINGQUEUE</node>
-            <node x="0.0" y="1035.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.DELIVERYREPORT</node>
-            <node x="499.19444444444446" y="828.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.UTLOGG</node>
-            <node x="11.756944444444457" y="0.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.SERVICE</node>
-            <node x="410.69444444444446" y="66.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.STATUS</node>
-            <node x="117.22916666666669" y="828.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INGAAENDELOGG</node>
-            <node x="824.0" y="1035.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.OUTGOINGCONSUMERTRACKER</node>
-            <node x="843.4722222222222" y="0.0">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.BESTILLINGER</node>
+            <node x="" y="">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.IKTSYSTEMER</node>
+            <node x="" y="">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INSTILLINGER</node>
+            <node x="" y="">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.LOGGTYPE</node>
+            <node x="" y="">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INCOMINGQUEUE</node>
+            <node x="" y="">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.OUTGOINGQUEUE</node>
+            <node x="" y="">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.DELIVERYREPORT</node>
+            <node x="" y="">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.UTLOGG</node>
+            <node x="" y="">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.SERVICE</node>
+            <node x="" y="">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.STATUS</node>
+            <node x="" y="">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INGAAENDELOGG</node>
+            <node x="" y="">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.OUTGOINGCONSUMERTRACKER</node>
+            <node x="" y="">38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.BESTILLINGER</node>
           </nodes>
           <notes />
-          <edges>
-            <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.OUTGOINGQUEUE" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.STATUS">
-              <point x="56.75" y="-246.0" />
-              <point x="683.7152777777778" y="236.0" />
-              <point x="527.5694444444445" y="236.0" />
-              <point x="23.375" y="37.0" />
-            </edge>
-            <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INCOMINGQUEUE" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.SERVICE">
-              <point x="-56.75" y="-246.0" />
-              <point x="56.75" y="266.0" />
-              <point x="77.00694444444446" y="266.0" />
-              <point x="-65.25" y="103.0" />
-            </edge>
-            <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INGAAENDELOGG" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.STATUS">
-              <point x="0.0" y="-81.0" />
-              <point x="229.72916666666669" y="803.0" />
-              <point x="295.96527777777777" y="803.0" />
-              <point x="295.96527777777777" y="266.0" />
-              <point x="480.81944444444446" y="266.0" />
-              <point x="-23.375" y="37.0" />
-            </edge>
-            <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INGAAENDELOGG" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INCOMINGQUEUE">
-              <point x="-75.0" y="-81.0" />
-              <point x="154.72916666666669" y="803.0" />
-              <point x="113.5" y="803.0" />
-              <point x="0.0" y="246.0" />
-            </edge>
-            <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.UTLOGG" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.STATUS">
-              <point x="76.0" y="-81.0" />
-              <point x="689.1944444444445" y="803.0" />
-              <point x="759.9722222222222" y="803.0" />
-              <point x="759.9722222222222" y="226.0" />
-              <point x="574.3194444444445" y="226.0" />
-              <point x="70.12500000000001" y="37.0" />
-            </edge>
-            <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.OUTGOINGQUEUE" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.SERVICE">
-              <point x="-56.75" y="-246.0" />
-              <point x="570.2152777777778" y="246.0" />
-              <point x="207.50694444444446" y="246.0" />
-              <point x="65.25" y="103.0" />
-            </edge>
-            <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.UTLOGG" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.LOGGTYPE">
-              <point x="-76.0" y="-81.0" />
-              <point x="537.1944444444445" y="803.0" />
-              <point x="446.71527777777777" y="803.0" />
-              <point x="46.75" y="37.0" />
-            </edge>
-            <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INCOMINGQUEUE" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.STATUS">
-              <point x="56.75" y="-246.0" />
-              <point x="170.25" y="256.0" />
-              <point x="434.06944444444446" y="256.0" />
-              <point x="-70.125" y="37.0" />
-            </edge>
-            <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.INGAAENDELOGG" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.LOGGTYPE">
-              <point x="75.0" y="-81.0" />
-              <point x="304.7291666666667" y="803.0" />
-              <point x="353.21527777777777" y="803.0" />
-              <point x="-46.75" y="37.0" />
-            </edge>
-            <edge source="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.UTLOGG" target="38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.OUTGOINGQUEUE">
-              <point x="0.0" y="-81.0" />
-              <point x="613.1944444444445" y="803.0" />
-              <point x="626.9652777777778" y="803.0" />
-              <point x="0.0" y="246.0" />
-            </edge>
-          </edges>
+          <edges />
           <settings layout="Hierarchic Group" zoom="1.0" x="87.0" y="448.0" />
-          <SelectedNodes>
-            <node>38dcba8c-99a5-4370-bd0a-3e0b8832ff9a.TABLE:SYSTEM.SERVICE</node>
-          </SelectedNodes>
+          <SelectedNodes />
           <Categories>
-            <Category>Key columns</Category>
             <Category>Columns</Category>
+            <Category>Key columns</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/schema.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/SERVICE.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement />
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="403.0" y="539.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/fabric8/openshift-client/3.0.0/openshift-client-3.0.0.jar!/io/fabric8/openshift/client/OpenShiftClient.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+        <state relative-caret-position="153">
+          <caret line="84" column="26" lean-forward="false" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/fabric8/openshift-client/3.0.0/openshift-client-3.0.0-sources.jar!/io/fabric8/openshift/client/OpenShiftClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/openeshift/integration/OpenShiftConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="68" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/38dcba8c-99a5-4370-bd0a-3e0b8832ff9a/console.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="179" column="1" lean-forward="true" selection-start-line="179" selection-start-column="1" selection-end-line="179" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="612">
+          <caret line="50" column="6" lean-forward="false" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1329#1330#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
