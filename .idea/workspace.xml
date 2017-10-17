@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40c312a7-2242-453d-8343-b89639e8cb65" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SERVICE.uml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/OpenShiftIntegrationLib-1.0.jar" afterPath="$PROJECT_DIR$/target/OpenShiftIntegrationLib-1.0.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/openeshift/integration/Cloud.class" afterPath="$PROJECT_DIR$/target/classes/no/openeshift/integration/Cloud.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/openeshift/integration/CloudImpl.class" afterPath="$PROJECT_DIR$/target/classes/no/openeshift/integration/CloudImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/openeshift/integration/OpenShiftConfig.class" afterPath="$PROJECT_DIR$/target/classes/no/openeshift/integration/OpenShiftConfig.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/no/openshift/integration/TestEtt.class" afterPath="$PROJECT_DIR$/target/test-classes/no/openshift/integration/TestEtt.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/OpenShiftIntegrationLib.iml" afterPath="$PROJECT_DIR$/.idea/OpenShiftIntegrationLib.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/no/openeshift/integration/Cloud.java" afterPath="$PROJECT_DIR$/src/main/java/no/openeshift/integration/Cloud.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/no/openeshift/integration/CloudImpl.java" afterPath="$PROJECT_DIR$/src/main/java/no/openeshift/integration/CloudImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java" afterPath="$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,22 +48,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestEtt.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="50" column="6" lean-forward="false" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1300#1301#0" expanded="true" />
-                <element signature="e#1329#1330#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -77,13 +68,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/no/openeshift/integration/CloudImpl.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/38dcba8c-99a5-4370-bd0a-3e0b8832ff9a/console.sql" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/resources/sql/schema.sql" />
         <option value="$MAVEN_REPOSITORY$/io/fabric8/openshift-client/3.0.0/openshift-client-3.0.0.jar!/io/fabric8/openshift/client/OpenShiftClient.class" />
         <option value="$PROJECT_DIR$/src/main/java/no/openeshift/integration/OpenShiftConfig.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$MAVEN_REPOSITORY$/io/fabric8/kubernetes-model/2.0.0/kubernetes-model-2.0.0.jar!/io/fabric8/kubernetes/api/model/NamespaceList.class" />
+        <option value="$MAVEN_REPOSITORY$/io/fabric8/kubernetes-model/2.0.0/kubernetes-model-2.0.0.jar!/io/fabric8/kubernetes/api/model/ServiceList.class" />
+        <option value="$MAVEN_REPOSITORY$/io/fabric8/kubernetes-model/2.0.0/kubernetes-model-2.0.0.jar!/io/fabric8/kubernetes/api/model/ObjectMetaFluent.class" />
+        <option value="$MAVEN_REPOSITORY$/io/fabric8/kubernetes-model/2.0.0/kubernetes-model-2.0.0.jar!/io/fabric8/kubernetes/api/model/Namespace.class" />
+        <option value="$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.0.1/junit-platform-commons-1.0.1.jar!/org/junit/platform/commons/util/ReflectionUtils.class" />
+        <option value="$PROJECT_DIR$/src/main/java/no/openeshift/integration/CloudImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/no/openeshift/integration/Cloud.java" />
         <option value="$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java" />
       </list>
     </option>
@@ -116,10 +113,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="32" />
-    <option name="y" value="25" />
-    <option name="width" value="961" />
-    <option name="height" value="793" />
+    <option name="x" value="26" />
+    <option name="width" value="1133" />
+    <option name="height" value="828" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -175,21 +171,6 @@
               <item name="OpenShiftIntegrationLib" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OpenShiftIntegrationLib" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OpenShiftIntegrationLib" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OpenShiftIntegrationLib" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OpenShiftIntegrationLib" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -204,21 +185,21 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../techpros/techpros-cv-srv" />
     <property name="settings.editor.selected.configurable" value="com.github.tinselspoon.intellij.kubernetes.config.KubernetesConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Oracle" />
   </component>
   <component name="RecentsManager">
@@ -263,6 +244,31 @@
       </option>
       <envs />
       <patterns />
+    </configuration>
+    <configuration name="TestEtt.createnameSpaceTest" type="mvnRunConfigurationType" factoryName="Mvn" temporary="true" runType="run_test">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="test-compile" />
+                <option value="surefire:test" />
+                <option value="-Dtest=no.openshift.integration.TestEtt#createnameSpaceTest" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
@@ -344,9 +350,14 @@
       <properties />
       <listeners />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.TestEtt" />
+      <item index="1" class="java.lang.String" itemvalue="Mvn.TestEtt.createnameSpaceTest" />
+    </list>
     <recent_temporary>
-      <list size="1">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="JUnit.TestEtt" />
+        <item index="1" class="java.lang.String" itemvalue="Mvn.TestEtt.createnameSpaceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -376,81 +387,84 @@
       <workItem from="1508010810857" duration="1347000" />
       <workItem from="1508012211772" duration="12167000" />
       <workItem from="1508142785024" duration="11000" />
+      <workItem from="1508142843723" duration="1891000" />
+      <workItem from="1508264586760" duration="52000" />
+      <workItem from="1508264678267" duration="11136000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestEtt - 2017.10.15 at 01h 25m 31s.xml">
+    <history-entry file="TestEtt - 2017.10.17 at 22h 55m 49s.xml">
       <configuration name="TestEtt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestEtt - 2017.10.15 at 01h 26m 30s.xml">
+    <history-entry file="TestEtt - 2017.10.17 at 22h 57m 12s.xml">
       <configuration name="TestEtt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestEtt - 2017.10.15 at 01h 29m 21s.xml">
+    <history-entry file="TestEtt - 2017.10.17 at 22h 57m 26s.xml">
       <configuration name="TestEtt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestEtt - 2017.10.15 at 01h 32m 07s.xml">
+    <history-entry file="TestEtt - 2017.10.17 at 23h 04m 52s.xml">
       <configuration name="TestEtt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestEtt - 2017.10.16 at 00h 11m 44s.xml">
+    <history-entry file="TestEtt - 2017.10.17 at 23h 05m 54s.xml">
       <configuration name="TestEtt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestEtt - 2017.10.16 at 00h 12m 00s.xml">
+    <history-entry file="TestEtt - 2017.10.17 at 23h 25m 48s.xml">
       <configuration name="TestEtt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestEtt - 2017.10.16 at 00h 18m 03s.xml">
+    <history-entry file="TestEtt - 2017.10.17 at 23h 59m 25s.xml">
       <configuration name="TestEtt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestEtt - 2017.10.16 at 00h 20m 58s.xml">
+    <history-entry file="TestEtt - 2017.10.17 at 23h 59m 26s.xml">
       <configuration name="TestEtt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestEtt - 2017.10.16 at 00h 22m 19s.xml">
+    <history-entry file="TestEtt - 2017.10.18 at 00h 03m 00s.xml">
       <configuration name="TestEtt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestEtt - 2017.10.16 at 00h 22m 57s.xml">
+    <history-entry file="TestEtt - 2017.10.18 at 00h 06m 42s.xml">
       <configuration name="TestEtt" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25791000" />
+    <option name="totallyTimeSpent" value="38870000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="32" y="25" width="961" height="793" extended-state="0" />
+    <frame x="26" y="0" width="1133" height="828" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14814815" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34246576" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.078782454" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2635135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26137567" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968035" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Notes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3994528" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39884394" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46387282" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25753012" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24261415" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33028919" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968536" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.068214804" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -500,13 +514,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java</url>
-          <line>16</line>
+          <url>file://$PROJECT_DIR$/src/main/java/no/openeshift/integration/CloudImpl.java</url>
+          <line>58</line>
           <properties />
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/no/openeshift/integration/CloudImpl.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -517,8 +537,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#1329#1330#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -529,8 +547,36 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#1329#1330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -539,9 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="68" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -557,9 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -569,8 +609,6 @@
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#1329#1330#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -594,9 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -611,9 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -631,23 +663,7 @@
           <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#1329#1330#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/openeshift/integration/Cloud.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/openeshift/integration/CloudImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -874,13 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/sql/schema.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="583">
@@ -958,32 +967,122 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/no/openeshift/integration/OpenShiftConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="241">
           <caret line="22" column="68" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/fabric8/kubernetes-model/2.0.0/kubernetes-model-2.0.0.jar!/io/fabric8/kubernetes/api/model/NamespaceList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/fabric8/kubernetes-model/2.0.0/kubernetes-model-2.0.0.jar!/io/fabric8/kubernetes/api/model/ServiceList.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/fabric8/kubernetes-model/2.0.0/kubernetes-model-2.0.0.jar!/io/fabric8/kubernetes/api/model/ObjectMetaFluent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="155" column="18" lean-forward="true" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="128" column="17" lean-forward="false" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/fabric8/kubernetes-model/2.0.0/kubernetes-model-2.0.0.jar!/io/fabric8/kubernetes/api/model/Namespace.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="53" column="53" lean-forward="false" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/openeshift/integration/Cloud.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="15" column="77" lean-forward="false" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.0.1/junit-platform-commons-1.0.1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        <state relative-caret-position="640">
+          <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/openeshift/integration/CloudImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/test/no/openshift/integration/TestEtt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="50" column="6" lean-forward="false" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+        <state relative-caret-position="16">
+          <caret line="62" column="6" lean-forward="false" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#1329#1330#0" expanded="true" />
           </folding>
         </state>
       </provider>
