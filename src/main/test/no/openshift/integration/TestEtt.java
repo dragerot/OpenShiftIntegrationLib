@@ -1,9 +1,12 @@
 package no.openshift.integration;
 
 import io.fabric8.kubernetes.api.model.Namespace;
+<<<<<<< HEAD
 import io.fabric8.kubernetes.api.model.NamespaceList;
 import io.fabric8.kubernetes.api.model.Service;
 import io.fabric8.kubernetes.api.model.ServiceList;
+=======
+>>>>>>> 6d743cb3c624e2e24fc5fe020478c275f9f0bc7e
 import io.fabric8.kubernetes.client.Config;
 import io.fabric8.kubernetes.client.ConfigBuilder;
 import io.fabric8.openshift.client.DefaultOpenShiftClient;
@@ -32,13 +35,17 @@ public class TestEtt {
     @BeforeAll
     public void before() {
         Config config = new ConfigBuilder()
-                .withMasterUrl(HOST_URL)
+                //.withMasterUrl(HOST_URL)
                 //.withOauthToken("ea4d0859-b1d7-11e7-bb08-8a91c37e8cd3").build();
-                .withUsername("developer")
-                .withPassword("developer").build();
+                .withUsername("developer").build();
+                //.withPassword("developer").build();
         DefaultOpenShiftClient defaultOpenShiftClient = new DefaultOpenShiftClient(config);
+<<<<<<< HEAD
         client = defaultOpenShiftClient.adapt(OpenShiftClient.class);
         target = new CloudImpl(client);
+=======
+        target = defaultOpenShiftClient.adapt(OpenShiftClient.class);
+>>>>>>> 6d743cb3c624e2e24fc5fe020478c275f9f0bc7e
 
     }
 

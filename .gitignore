@@ -3,6 +3,7 @@
 .idea/dataSources/
 .idea/inspectionProfiles/
 src/main/resources/
+target/
 target/generated-sources/
 target/generated-test-sources/
 target/surefire-reports/
