@@ -1,11 +1,13 @@
 package no.openshift.integration;
 
 import io.fabric8.kubernetes.api.model.*;
+import io.fabric8.kubernetes.api.model.extensions.Deployment;
 import io.fabric8.kubernetes.client.Config;
 import io.fabric8.kubernetes.client.ConfigBuilder;
 import io.fabric8.kubernetes.client.DefaultKubernetesClient;
 import io.fabric8.kubernetes.client.KubernetesClient;
 import io.fabric8.openshift.api.model.DeploymentConfig;
+import io.fabric8.openshift.api.model.DeploymentConfigList;
 import io.fabric8.openshift.api.model.DeploymentTriggerImageChangeParamsBuilder;
 import io.fabric8.openshift.api.model.ProjectRequest;
 import io.fabric8.openshift.client.DefaultOpenShiftClient;
@@ -34,8 +36,10 @@ public class ForskjelligeCallTilApiTest {
     public void before() {
         Config config = new ConfigBuilder()
                 .withMasterUrl(URL)
-                .withUsername("developer")
-                .withPassword("developer").build();
+                //.withOauthToken("eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJldHByb3NqZWt0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImRlcGxveWVyLXRva2VuLTczeHdnIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImRlcGxveWVyIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNWViZTBmYzctZDUwZS0xMWU3LWI2NGMtYzI2ODhjZGQyZTZiIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmV0cHJvc2pla3Q6ZGVwbG95ZXIifQ.pXX_QWsDq3LXyD943y_mXTB4pXcvjVxjiESZzv0CfNp60PA1Kl8iIBiDEpTiRVqHu8b03Fx1JnT5yuhgNumyI1-4Dc2E9NE86AUZNdY--RYeBXZp9OJ60tlm4C2YI13g0nvDpfbvNau_Zc2bPATaoOAN5H7QF2C1rj_3jhXC0YxhgE-FojeWN9RXHW-kAY6F40HcNK8jW6eUNybCVJX3Fk2yPYZqzb5h1RHenjY4IF4pSBXpeACjX1H1KpMhUgyM-k2hWGIhG-yL9OJjRHxSu57daJGYsaqDFtqf8lRYxlZAd7BfHWxAj7Awmps1PKkeIXWwngBEYLT75v8M1svuSA")
+                .withUsername("system:admin")
+               // .withPassword("developer")
+                .build();
         client = new DefaultKubernetesClient(config);
         osClient = new DefaultOpenShiftClient(config);// client.adapt(OpenShiftClient.class);
 
@@ -47,7 +51,7 @@ public class ForskjelligeCallTilApiTest {
         osClient.close();
     }
 
-    @Test
+    //@Test
     public void createProjectTest() {
         createProject();
     }
@@ -59,7 +63,6 @@ public class ForskjelligeCallTilApiTest {
     private ProjectRequest createProject() {
         Map<String, String> labelsApp = new HashMap<String, String>();
         labelsApp.put("app", "app1");
-        labelsApp.put("jalla", "jalla1");
 
         ProjectRequest request = null;
         try {
@@ -91,13 +94,18 @@ public class ForskjelligeCallTilApiTest {
         return request;
     }
 
-    @Test
+    //@Test
     public void deleteNameSpace() {
         osClient.projects().withName(PROJECT).delete();
     }
 
     @Test
     public void listProjects() {
+        Service service = new Service();
+
+        //osClient.services().inNamespace("etprosjekt").createOrReplace();
+        PodList podList =osClient.pods().inNamespace("etprosjekt").list();
+
         ServiceList myServices = osClient.services().list();
         NamespaceList myNs = osClient.namespaces().list();
         for (Namespace ns : myNs.getItems()) {
@@ -107,6 +115,60 @@ public class ForskjelligeCallTilApiTest {
         for (Service item : myServices.getItems()) {
             System.out.println(item.toString());
         }
+    }
+
+    @Test
+    public void deploymentTest(){
+        //String PROSJEKTNAVN="ftp-developer";
+        String PROSJEKTNAVN="etprosjekt";
+        //String PROSJEKTNAVN="js2i-demo";
+        ProjectRequest projectRequest = createProject();  //js2i-demo:js2i-service-account etprosjektserviceccount
+        //ServiceAccount developer = new ServiceAccountBuilder().withNewMetadata().withName("js2i-service-account").endMetadata().build();
+
+        DeploymentConfigList deploymentConfigList = osClient.deploymentConfigs().list();
+
+      // try{
+           //osClient.serviceAccounts().inNamespace(PROSJEKTNAVN).createOrReplace(developer);
+
+           DeploymentConfig deploymentConfig =
+                   osClient.deploymentConfigs()
+                           //.createOrReplaceWithNew()
+                           .inNamespace(PROSJEKTNAVN)
+                           .createOrReplaceWithNew()
+                           .withNewMetadata()
+                           .withName("toregardtestutv")
+                           .withNamespace(PROSJEKTNAVN)
+                           //.addToLabels("app","toregardTest")
+                           .endMetadata()
+                           .withNewSpec()
+                           .withReplicas(1)
+                           .addToSelector("app","toregardTest")
+                           .withNewTemplate()
+                           .withNewMetadata()
+                           .addToLabels("name","toregardTest")
+                           .endMetadata()
+                           .withNewSpec()
+                           .addNewContainer()
+                           .withName("containernavntoregardtest")
+                           .withImage("toregard/jerseydemo1@sha256:0c3c838bf65ebb5850e71e226dc8aa93642295e7bcc27ad007b0f148b854153f")
+                           //.withImage("penshift/origin-ruby-sample")
+                           .withImagePullPolicy("Always")
+                           .addNewPort()
+                           .withContainerPort(8083)
+                           .withProtocol("TCP")
+                           .endPort()
+                           .endContainer()
+                           .endSpec()
+                           .endTemplate()
+                           .endSpec()
+                           .done();
+
+
+//       }catch (Exception e){
+//
+//       }
+
+
     }
 
 
