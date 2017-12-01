@@ -1,34 +1,62 @@
 package no.openshift.integration;
-
-import io.fabric8.kubernetes.api.model.*;
-import io.fabric8.kubernetes.client.DefaultKubernetesClient;
-import io.fabric8.kubernetes.client.KubernetesClient;
-import io.fabric8.openshift.api.model.*;
-import io.fabric8.openshift.client.DefaultOpenShiftClient;
-import io.fabric8.openshift.client.OpenShiftClient;
-
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
 
-import org.junit.jupiter.api.*;
+import no.openeshift.integration.Fabric8Util;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+//import io.fabric8.docker.client.Config;
+//import io.fabric8.docker.client.ConfigBuilder;
+//import io.fabric8.docker.client.DefaultDockerClient;
+//import io.fabric8.docker.client.DockerClient;
+//import io.fabric8.docker.dsl.container.LimitSinceBeforeSizeFiltersAllRunningInterface;
+//tga import io.fabric8.kubernetes.api.Controller;
+import io.fabric8.kubernetes.api.model.Container;
+import io.fabric8.kubernetes.api.model.ContainerPort;
+import io.fabric8.kubernetes.api.model.Namespace;
+import io.fabric8.kubernetes.api.model.NamespaceList;
+import io.fabric8.kubernetes.api.model.ObjectMeta;
+import io.fabric8.kubernetes.api.model.Pod;
+import io.fabric8.kubernetes.api.model.PodList;
+import io.fabric8.kubernetes.api.model.Service;
+import io.fabric8.kubernetes.api.model.ServiceBuilder;
+import io.fabric8.kubernetes.api.model.ServiceList;
+import io.fabric8.kubernetes.api.model.ServicePort;
+import io.fabric8.kubernetes.api.model.ServiceStatus;
+import io.fabric8.kubernetes.client.DefaultKubernetesClient;
+import io.fabric8.kubernetes.client.KubernetesClient;
+import io.fabric8.openshift.api.model.Build;
+import io.fabric8.openshift.api.model.BuildConfig;
+import io.fabric8.openshift.api.model.BuildConfigBuilder;
+import io.fabric8.openshift.api.model.BuildRequestBuilder;
+import io.fabric8.openshift.api.model.DeploymentConfig;
+import io.fabric8.openshift.api.model.DeploymentConfigBuilder;
+import io.fabric8.openshift.api.model.DeploymentConfigStatus;
+import io.fabric8.openshift.api.model.ImageStream;
+import io.fabric8.openshift.api.model.ImageStreamBuilder;
+import io.fabric8.openshift.api.model.WebHookTriggerBuilder;
+import io.fabric8.openshift.client.DefaultOpenShiftClient;
+import io.fabric8.openshift.client.OpenShiftClient;
+//import no.test.DockerUtil;
 
 
 //import com.openshift.client.IOpenShiftConnection;
 //import com.openshift.client.IUser;
 //import com.openshift.client.OpenShiftConnectionFactory;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class Tester {
     //public IOpenShiftConnection connection;
     KubernetesClient client;
     OpenShiftClient osClient;
     String project = "myproject";
 
-    @BeforeAll
+    @Before
     public void setUp() {
         io.fabric8.kubernetes.api.model.Config conf;
         io.fabric8.kubernetes.client.Config conf2;
@@ -36,17 +64,28 @@ public class Tester {
         conf = new io.fabric8.kubernetes.api.model.ConfigBuilder()
                 .build();
         conf2 = new io.fabric8.kubernetes.client.ConfigBuilder()
+                //.with
                 .withUsername("developer")
                 .withPassword("developer")
+        		/*
+           		.withUsername("system:admin")
+        		.withPassword("admin")
+        		*/
                 .build();
         client = new DefaultKubernetesClient(conf2);
         osClient = new DefaultOpenShiftClient(conf2);
+
+        //osClient.
+        System.out.println("cli1 " + client.getMasterUrl() + " " + client.getNamespace());
+        System.out.println("cli2 " + osClient.getMasterUrl() + " " + osClient.getNamespace());
         //osClient.
         System.out.println("setup done");
     }
 
-    @AfterAll
+    @After
     public void after() {
+        client.close();
+        osClient.close();
         System.out.println("after test");
         //IUser user = user = connection.getUser();
     }
@@ -54,7 +93,7 @@ public class Tester {
     @Test
     public void myTest() {
         ServiceList myServices = osClient.services().list();
-        NamespaceList myNs = client.namespaces().list();
+        NamespaceList myNs = osClient.namespaces().list();
         for (Namespace ns : myNs.getItems()) {
             System.out.println("ns " + ns.toString());
             //ns.c
@@ -62,13 +101,25 @@ public class Tester {
         for (Service item : myServices.getItems()) {
             System.out.println(item.toString());
         }
-        PodList myNsServices = client.pods().inNamespace(project).list();
-        for (Pod item : myNsServices.getItems()) {
-            //System.out.println("iy " + item.get);
-            //item.
-        }
-        List<ImageStream> imagestr = osClient.imageStreams().list().getItems();
+    /*
+    PodList myNsServices = client.pods().inNamespace(project).list();
+    for (Pod item : myNsServices.getItems()) {
+    	//System.out.println("iy " + item.get);
+    	//item.
+    }
+    List<ImageStream> imagestr = osClient.imageStreams().list().getItems();
+    */
+        //tga Config config4 = new ConfigBuilder().withDockerUrl("https://192.168.99.102:2376").build();
 
+       //tga DockerClient dClient = new DefaultDockerClient(config4);
+        //LimitSinceBeforeSizeFiltersAllRunningInterface<List<Container>> conts = dClient.container().list();
+    /*
+    for (Container i : conts.running()) {
+    	System.out.println("id " + i.getId());
+    }
+    ContainerInspect inspect = dClient.container().withName("").inspect();
+    System.out.println(inspect);
+  */
         Boolean myservice = client.pods().inNamespace(project).withName("classify").delete();
         System.out.println("d " + myservice);
         myservice = client.services().inNamespace(project).withName("classify-1").delete();
@@ -88,10 +139,10 @@ public class Tester {
         String debian = "debian";
         String debianstretch = "debian:stretch";
         String stretch = "stretch";
-        Map<String, String> selector = new HashMap<String,String>();
+        Map<String, String> selector = new HashMap<String, String>();
         selector.put("app", name);
         selector.put("deploymentconfig", name);
-        Map<String, String> labels = new HashMap<String,String>();
+        Map<String, String> labels = new HashMap<String, String>();
         labels.put("build", name);
         ImageStream isDebian = new ImageStreamBuilder()
                 .withNewMetadata()
@@ -176,12 +227,12 @@ public class Tester {
                 .withNewMetadata().withName(bc.getMetadata().getName()).endMetadata()
                 .build());
         //osClient.buildConfigs().inNamespace(project).withName(bc.getMetadata().getName())
-        //.withSecret("secret101") 
+        //.withSecret("secret101")
         //.withType("imagechange")
         //.tr
         /*
         .trigger(new WebHookTriggerBuilder()
-        		.withSecret("secret101") 
+        		.withSecret("secret101")
                 .build());
                 */
         ImageStream is = new ImageStreamBuilder().withNewMetadata().withName("myIs").endMetadata()
@@ -201,7 +252,7 @@ public class Tester {
     	              .withNewTargetPort(8080)
     	            .endPort()
     	            .addToSelector("key1", "value1")
-    	            
+
     	           //withPortalIP("172.30.234.134")
     	            .withType("ClusterIP")
     	          .endSpec()
@@ -216,4 +267,136 @@ public class Tester {
 ).build();
 */
     }
+
+//    @Test
+//    public void t3() {
+//        DockerUtil.method();
+//    }
+
+    public void createDC(String name, String image) {
+
+        Map<String, String> labelsApp = new HashMap<String,String>();
+        labelsApp.put("app", name);
+        labelsApp.put("deploymentconfig", name);
+        /*
+        Map<String, String> labelsApp2 = new HashMap<>();
+        labelsApp2.put(name, project);
+        */
+        ObjectMeta metaApp = Fabric8Util.createObjectMeta(name, labelsApp);
+        //ObjectMeta metaApp = Fabric8Util.createObjectMeta(name);
+
+
+        Map<String, String> selector = new HashMap<String, String>();
+        selector.put("app", name);
+        selector.put("deploymentconfig", name);
+/*
+        Map<String, String> selector2 = new HashMap<>();
+        selector2.put(name, project);
+ */
+        ContainerPort containerPort = Fabric8Util.createContainerPort("TCP", 8001);
+        List<ContainerPort> ports = new ArrayList<ContainerPort>();
+        ports.add(containerPort);
+        List<String> names = new ArrayList<String>();
+        names.add(name);
+        Container container = Fabric8Util.createContainer(name, image, ports);
+        List<Container> containers = new ArrayList<Container>();
+        containers.add(container);
+
+        ServicePort servicePort = Fabric8Util.createServicePort("TCP", 8001, 8001);
+        System.out.println("here4");
+        Service srv = new ServiceBuilder()
+                .withMetadata(metaApp)
+                .withNewSpec()
+                .withPorts(servicePort)
+                .withSelector(selector)
+                .endSpec()
+                .build();
+
+        DeploymentConfig dc = new DeploymentConfigBuilder()
+                .withMetadata(metaApp)
+                .withNewSpec()
+                .withReplicas(1)
+                .withSelector(selector)
+                .withNewStrategy()
+                .withNewResources()
+                .endResources()
+                .endStrategy()
+                .withNewTemplate()
+                .withNewMetadata()
+                .withLabels(labelsApp)
+                .endMetadata()
+                .withNewSpec()
+                //.withServiceAccountName(name)
+                .withContainers(containers)
+                .endSpec()
+                .endTemplate()
+                .withTest(false)
+                .addNewTrigger()
+                .withType("ConfigChange")
+                /*
+                .withNewImageChangeParams()
+                //.withNewImageChange()
+                .withNewFrom()
+                .withKind("ImageStreamTag")
+                .withName(debianstretch)
+                .endFrom()
+                .endImageChangeParams()
+                */
+                .endTrigger()
+                .addNewTrigger()
+                .withType("ImageChange")
+                .withNewImageChangeParams()
+                .withAutomatic(true)
+                .withContainerNames(name)
+                .withNewFrom()
+                .withName(image  + ":latest")
+                .endFrom()
+                .endImageChangeParams()
+                .endTrigger()
+                .endSpec()
+                .build();
+
+                /*
+                .with
+                .withNewGeneric()
+                .withSecret("secret101")
+                .endGeneric()
+                .build();
+                /*
+                .endImageChange()
+                */
+                /*
+                .addNewTrigger()
+                .withType("ConfigChange")
+                .endTrigger()
+                .endSpec()
+                .build();
+                */
+        DeploymentConfigStatus s = osClient
+                .deploymentConfigs()
+                .inNamespace(project)
+                .createOrReplace(dc)
+                .getStatus();
+
+        ServiceStatus s2 = osClient
+                .services()
+                .inNamespace(project)
+                .createOrReplace(srv)
+                .getStatus();
+        System.out.println(s.toString());
+        System.out.println(s2.toString());
+
+
+       //tga Controller cont = new Controller(osClient);
+        //int i = controller.
+
+        System.out.println("here10");
+
+    }
+
+    @Test
+    public void t6() {
+        createDC("amysql", "mysql");
+    }
+
 }

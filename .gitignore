@@ -2,9 +2,22 @@
 .gitignore
 .idea/dataSources/
 .idea/inspectionProfiles/
+
 src/main/resources/
+.idea/
+*.iws
+*.iml
+*.ipr
+
 target/
-target/generated-sources/
-target/generated-test-sources/
-target/surefire-reports/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+### Java template
+*.class
+
 
