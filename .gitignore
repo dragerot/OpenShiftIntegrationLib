@@ -2,7 +2,7 @@
 .gitignore
 .idea/dataSources/
 .idea/inspectionProfiles/
-
+.idea/workspace.xml
 src/main/resources/
 .idea/
 *.iws
@@ -11,13 +11,3 @@ src/main/resources/
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-### Java template
-*.class
-
-
