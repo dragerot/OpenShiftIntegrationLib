@@ -1,10 +1,13 @@
 package no.openshift;
 
 import io.fabric8.kubernetes.api.model.IntOrString;
+import io.fabric8.kubernetes.api.model.Service;
+import io.fabric8.kubernetes.api.model.ServiceBuilder;
 import io.fabric8.openshift.api.model.DeploymentConfig;
 import io.fabric8.openshift.api.model.DeploymentConfigBuilder;
 import io.fabric8.openshift.api.model.DeploymentConfigStatus;
 import io.fabric8.openshift.api.model.RollingDeploymentStrategyParams;
+import org.omg.IOP.ServiceContextHelper;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -63,7 +66,7 @@ status:
   availableReplicas: 1
  */
 public class NginxDeployment {
-    public static DeploymentConfig createDeplymentConfig(String nameSpace, String deploymentConfigName, String app) {
+    public static DeploymentConfig createDeplymentConfig(String nameSpace, String deploymentConfigName, String imagename, String app) {
         String VERSJON_API ="v1";
         String PROSJEKTNAVN = nameSpace;
         //String DEPLOYMENT_CONFIG_NAME = "nginx-deployment";
@@ -130,5 +133,11 @@ public class NginxDeployment {
                 .build();
 
         return deploymentConfig;
+    }
+
+    public static void createService(){
+
+
+        //return service;
     }
 }

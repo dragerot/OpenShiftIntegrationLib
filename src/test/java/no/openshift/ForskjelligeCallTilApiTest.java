@@ -101,11 +101,53 @@ public class ForskjelligeCallTilApiTest {
      */
     @Test
     public void deployment_nginx_Test() {
-        OpenShiftClient osClient = getOpenShiftClient("developer", "developer", "");
         String PROSJEKTNAVN = "fjernmegproject";
+        String DEPLOYMENTCONFIG_NAME= "nginx-deployment";
+        String IMAGE_NAME = "nginx:1.13.7";
+        String APP_NAME = "nginx";
+        int PORT =8083;
+        int EXPOSED_PORT =8083;
+
+
+        OpenShiftClient osClient = getOpenShiftClient("developer", "developer", "");
 
         try {
-            DeploymentConfig deploymentConfig =osClient.deploymentConfigs().create(NginxDeployment.createDeplymentConfig(PROSJEKTNAVN));
+            DeploymentConfig deploymentConfig =
+                    osClient.deploymentConfigs()
+                            .create(NginxDeployment
+                                    .createDeplymentConfig(
+                                            PROSJEKTNAVN,DEPLOYMENTCONFIG_NAME,
+                                            IMAGE_NAME,
+                                            APP_NAME));
+            DeploymentConfigStatus deploymentConfigStatus= deploymentConfig.getStatus();
+            System.out.println("****CREATE DEPLOYMENTCONFIG DONE**************************");
+            System.out.println(deploymentConfigStatus);
+            System.out.println("****CREATE SERVICE DONE**************************");
+            try {
+                osClient.services()
+                        .createNew()
+                        .withApiVersion("v1")
+                            .withNewMetadata()
+                                .withName("nginx-service")
+                                .withNamespace(PROSJEKTNAVN)
+                            .endMetadata()
+                        .withNewSpec()
+                        .addToSelector("app", APP_NAME)
+                        .addNewPort()
+                            .withProtocol("TCP")
+                            .withPort(PORT)
+                            .withNewTargetPort("8085")
+                        .endPort()
+                        .endSpec()
+                        .done();
+
+                        //.setApiVersion("v1")
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
         } catch (Exception e) {
             System.out.println("*****deployment_nginx_Test***************ERROR" + e.getMessage());
         }
