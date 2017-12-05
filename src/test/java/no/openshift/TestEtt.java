@@ -1,32 +1,26 @@
-package no.openshift.integration;
+package no.openshift;
 
-import io.fabric8.kubernetes.api.model.*;
-import io.fabric8.kubernetes.client.*;
+import io.fabric8.kubernetes.api.model.NamedAuthInfo;
 import io.fabric8.kubernetes.client.Config;
 import io.fabric8.kubernetes.client.ConfigBuilder;
-import io.fabric8.kubernetes.client.dsl.ExtensionsAPIGroupDSL;
+import io.fabric8.kubernetes.client.KubernetesClient;
 import io.fabric8.openshift.api.model.ProjectRequest;
 import io.fabric8.openshift.client.DefaultOpenShiftClient;
 import io.fabric8.openshift.client.OpenShiftClient;
 import io.fabric8.openshift.client.OpenShiftConfig;
-import org.junit.jupiter.api.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
 
-import javax.validation.constraints.AssertTrue;
-import java.net.URL;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-@DisplayName("A special test case")
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@Ignore
 public class TestEtt {
     public static final String HOST_URL = "https://192.168.0.16:8443";
 
     KubernetesClient client;
     OpenShiftClient osClient = null;
 
-    @BeforeAll
+    @Before
     public void before() {
         NamedAuthInfo na; //= OpenShiftConfig;
         OpenShiftConfig.builder().build();
@@ -37,14 +31,14 @@ public class TestEtt {
                 .withUsername("developer")
                 .withPassword("developer").build();
 
-       client= new DefaultKubernetesClient(config);
-       osClient = new DefaultOpenShiftClient(config);// client.adapt(OpenShiftClient.class);
+        //client= new DefaultKubernetesClient(config);
+        osClient = new DefaultOpenShiftClient(config);// client.adapt(OpenShiftClient.class);
 
     }
 
-    @AfterAll
+    @After
     public void after() {
-        client.close();
+        //client.close();
         osClient.close();
     }
 
@@ -85,7 +79,6 @@ public class TestEtt {
 //                //.withNamespace("namespace1")
 //                .endMetadata()
 //                .done();
-
 
 
 //        Service myservice = client.services().inNamespace("default").createNew()

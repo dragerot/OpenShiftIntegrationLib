@@ -1,14 +1,13 @@
-package no.openshift.integration;
+package no.openshift;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
 
 import no.openeshift.integration.Fabric8Util;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 //import io.fabric8.docker.client.Config;
@@ -49,7 +48,7 @@ import io.fabric8.openshift.client.OpenShiftClient;
 //import com.openshift.client.IOpenShiftConnection;
 //import com.openshift.client.IUser;
 //import com.openshift.client.OpenShiftConnectionFactory;
-
+@Ignore
 public class Tester {
     //public IOpenShiftConnection connection;
     KubernetesClient client;

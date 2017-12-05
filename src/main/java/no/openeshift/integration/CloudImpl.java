@@ -9,29 +9,29 @@ import io.fabric8.openshift.client.OpenShiftClient;
 
 import java.util.Map;
 
-public class CloudImpl implements Cloud {
+public class CloudImpl { //implements Cloud {
     OpenShiftClient client;
 
     public CloudImpl(OpenShiftClient client) {
         this.client = client;
     }
 
-    @Override
+ //   @Override
     public NamespaceList listNamespaces() {
         return client.namespaces().list();
     }
 
-    @Override
+//    @Override
     public Namespace getNamespaceResourceWithname(String name) {
         return client.namespaces().withName(name).get();
     }
 
-    @Override
+//    @Override
     public void deleteNamespace(String name) {
         client.namespaces().withName(name).delete();
     }
 
-    @Override
+//    @Override
     public Namespace createNewLabelInNameSpace(String nameSpaceName, String labelKey, String labelName) {
         return client.namespaces().withName(nameSpaceName).edit()
                 .editMetadata()
@@ -40,7 +40,7 @@ public class CloudImpl implements Cloud {
                 .done();
     }
 
-    @Override
+    //@Override
     public ProjectRequest creatNewNameSpace(
             String nameSpaceName,
             String description,
@@ -63,27 +63,27 @@ public class CloudImpl implements Cloud {
         return request;
     }
 
-    @Override
+    // @Override
     public ServiceList listServices() {
         return client.services().list();
     }
 
-    @Override
+    // @Override
     public ServiceList listServicesInNameSpace(String name) {
         return client.services().inNamespace(name).list();
     }
 
-    @Override
+    // @Override
     public Service getServiceWithname(String inNameSpaceName, String name) {
         return client.services().inNamespace(inNameSpaceName).withName(name).get();
     }
 
-    @Override
+    //@Override
     public void deleteService(String inNameSpaceMame, String name) {
         client.services().inNamespace(inNameSpaceMame).withName(name).delete();
     }
 
-    @Override
+    //@Override
     public Service createService(String name, Map<String, String> labels) {
         return null;
     }
