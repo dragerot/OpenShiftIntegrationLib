@@ -3,10 +3,11 @@ package no.openshift;
 import io.fabric8.kubernetes.api.model.IntOrString;
 import io.fabric8.kubernetes.api.model.Service;
 import io.fabric8.kubernetes.api.model.ServiceBuilder;
-import io.fabric8.openshift.api.model.DeploymentConfig;
-import io.fabric8.openshift.api.model.DeploymentConfigBuilder;
-import io.fabric8.openshift.api.model.DeploymentConfigStatus;
-import io.fabric8.openshift.api.model.RollingDeploymentStrategyParams;
+import io.fabric8.kubernetes.client.Config;
+import io.fabric8.kubernetes.client.ConfigBuilder;
+import io.fabric8.openshift.api.model.*;
+import io.fabric8.openshift.client.DefaultOpenShiftClient;
+import io.fabric8.openshift.client.OpenShiftClient;
 import org.omg.IOP.ServiceContextHelper;
 
 import java.util.HashMap;
@@ -65,17 +66,25 @@ spec:
 status:
   availableReplicas: 1
  */
-public class NginxDeployment {
-    public static DeploymentConfig createDeplymentConfig(String nameSpace, String deploymentConfigName, String imagename, String app) {
-        String VERSJON_API ="v1";
-        String PROSJEKTNAVN = nameSpace;
-        //String DEPLOYMENT_CONFIG_NAME = "nginx-deployment";
-        String DEPLOYMENT_CONFIG_NAME = deploymentConfigName;
-        String IMAGE_NAME = "nginx:1.13.7";
-        //String CONTAINER_NAME = "nginx";
-        String CONTAINER_NAME =app;
-        int PORT =8083;
+public class DeploymentFacade {
+    private static final String VERSJON_API ="v1";
+    private static final String URL = "https://openshift:8443";
 
+    public static OpenShiftClient getOpenShiftClient(String user, String passord, String oauthToken) {
+        Config config = new ConfigBuilder().withMasterUrl(URL).build();
+        config.setTrustCerts(true);
+        if (oauthToken.trim().length() > 0) {
+            config.setOauthToken(oauthToken);
+        } else {
+            config.setUsername(user);
+            config.setPassword(passord);
+
+        }
+        return new DefaultOpenShiftClient(config);
+
+    }
+
+    public static DeploymentConfig createDeplymentConfig(String nameSpace, String deploymentConfigName, String imagename, String app, int port, String apiVersion) {
         RollingDeploymentStrategyParams rollingDeploymentStrategyParams = new RollingDeploymentStrategyParams();
         rollingDeploymentStrategyParams.setIntervalSeconds(1l);
         rollingDeploymentStrategyParams.setMaxSurge(new IntOrString("25%"));
@@ -87,15 +96,15 @@ public class NginxDeployment {
         deploymentConfigStatus.setAvailableReplicas(Integer.getInteger("1"));
 
         DeploymentConfig deploymentConfig = new DeploymentConfigBuilder()
-                .withApiVersion(VERSJON_API)
+                .withApiVersion(apiVersion)
                 .withNewMetadata()
-                .addToLabels("app", CONTAINER_NAME)
-                .withName(DEPLOYMENT_CONFIG_NAME)
-                .withNamespace(PROSJEKTNAVN)
+                .addToLabels("app", app)
+                .withName(deploymentConfigName)
+                .withNamespace(nameSpace)
                 .endMetadata()
                 .withNewSpec()
                 .withReplicas(1)
-                .addToSelector("app", CONTAINER_NAME)
+                .addToSelector("app", app)
                 .withNewStrategy()
                 .withActiveDeadlineSeconds(21600l)
                 .withRollingParams(rollingDeploymentStrategyParams)
@@ -103,19 +112,19 @@ public class NginxDeployment {
                 .endStrategy()
                 .withNewTemplate()
                 .withNewMetadata()
-                .addToLabels("app", CONTAINER_NAME)
+                .addToLabels("app", app)
                 .endMetadata()
                 .withNewSpec()
                 .addNewContainer()
-                .withImage(IMAGE_NAME)
+                .withImage(imagename)
                 .withImagePullPolicy("IfNotPresent")
-                .withName(CONTAINER_NAME)
+                .withName(app)
                 .addNewPort()
-                .withContainerPort(PORT)
+                .withContainerPort(port)
                 .withProtocol("TCP")
                 .endPort()
-                .withTerminationMessagePath("/dev/termination-log")
-                .withTerminationMessagePolicy("File")
+//                .withTerminationMessagePath("/dev/termination-log")
+//                .withTerminationMessagePolicy("File")
                 .endContainer()
                 .withDnsPolicy("ClusterFirst")
                 .withRestartPolicy("Always")
@@ -135,9 +144,48 @@ public class NginxDeployment {
         return deploymentConfig;
     }
 
-    public static void createService(){
+    public static Service createService(String nameSpace, int port, int exPort,String protocol,String app,String apiVersion){
+        String portFormatted = String.format("%d-%s",port,protocol);
+        return new ServiceBuilder()
+                .withApiVersion(apiVersion)
+                .withNewMetadata()
+                .withName(app+"-service")
+                .withNamespace(nameSpace)
+                .endMetadata()
+                .withNewSpec()
+                .addToSelector("app", app)
+                .addNewPort()
+                .withName(portFormatted)
+                .withProtocol("TCP")
+                .withPort(port)
+                .withNewTargetPort(exPort)
+                .endPort()
+                .endSpec()
+                .build();
+    }
 
-
-        //return service;
+    public static Route createRoute(String nameSpace,String app, String path, int targetPort, String protocol,String apiVersion){
+        String targetPortformatted = String.format("%d-%s",targetPort,protocol);
+        return new RouteBuilder()
+                .withApiVersion(apiVersion)
+                .withNewMetadata()
+                .withName(app+"-route")
+                .withNamespace(nameSpace)
+                .addToLabels("app",app)
+                .endMetadata()
+                .withNewSpec()
+                //.withHost(app+"-vegvesen.no")
+                .withPath(path)
+                .withNewPort()
+                 .withNewTargetPort(targetPortformatted)
+                .endPort()
+                .withNewTo()
+                .withKind("Service")
+                .withName(app+"-service")
+                .endTo()
+//                .withNewTls()
+//                    .withTermination("passthrough")
+//                .endTls()
+                .endSpec().build();
     }
 }

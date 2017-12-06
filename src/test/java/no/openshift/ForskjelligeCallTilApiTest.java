@@ -3,8 +3,6 @@ package no.openshift;
 import io.fabric8.kubernetes.api.model.*;
 import io.fabric8.kubernetes.client.Config;
 import io.fabric8.kubernetes.client.ConfigBuilder;
-import io.fabric8.kubernetes.client.KubernetesClientException;
-import io.fabric8.kubernetes.client.Watcher;
 import io.fabric8.openshift.api.model.DeploymentConfig;
 import io.fabric8.openshift.api.model.DeploymentConfigBuilder;
 import io.fabric8.openshift.api.model.DeploymentConfigList;
@@ -109,74 +107,21 @@ public class ForskjelligeCallTilApiTest {
         String DEPLOYMENTCONFIG_NAME= "nginx-deployment";
         String IMAGE_NAME = "nginx:1.13.7";
         String APP_NAME = "nginx";
+        String KJORE_MILJO ="atm";
+        String API_VERSION="v1";
         int PORT =8083;
-        int EXPOSED_PORT =8085;
-
-
-        OpenShiftClient osClient = getOpenShiftClient("developer", "developer", "");
-
-        osClient.events().inNamespace(PROSJEKTNAVN).watch(new Watcher<Event>() {
-            public void eventReceived(Action action, Event resource) {
-                System.out.println("event " + action.name() + " " + resource.toString());
-            }
-
-            public void onClose(KubernetesClientException cause) {
-                System.out.println("Watcher close due to " + cause);
-            }
-        });
+        int TARGET_PORT =8085;
+        String TARGET_PORT_PROTOCOL="tcp";
 
         try {
-                  osClient.deploymentConfigs()
-                            .create(NginxDeployment
-                                    .createDeplymentConfig(
-                                            PROSJEKTNAVN,DEPLOYMENTCONFIG_NAME,
-                                            IMAGE_NAME,
-                                            APP_NAME));
-            System.out.println("****CREATE DEPLOYMENTCONFIG DONE**************************");
-
-            System.out.println("****CREATE SERVICE START**************************");
-
-                osClient.services()
-                        .createNew()
-                        .withApiVersion("v1")
-                        .withNewMetadata()
-                                .withName("nginx-service")
-                                .withNamespace(PROSJEKTNAVN)
-                            .endMetadata()
-                        .withNewSpec()
-                        .addToSelector("app", APP_NAME)
-                        .addNewPort()
-                            .withName("nginx-service-port")
-                            .withProtocol("TCP")
-                            .withPort(PORT)
-                            .withNewTargetPort(EXPOSED_PORT)
-                        .endPort()
-                        .endSpec()
-                        .done();
-                System.out.println("****CREATE SERVICE DONE**************************");
-
-                System.out.println("****CREATE ROUTE START**************************");
-                //https://docs.openshift.org/latest/dev_guide/routes.html
-                osClient.routes()
-                        .createNew()
-                        .withApiVersion("v1")
-                        .withNewMetadata()
-                            .withName("nginx-route")
-                            .withNamespace(PROSJEKTNAVN)
-                            .addToLabels("app","nginx")
-                        .endMetadata()
-                        .withNewSpec()
-                         .withPath("/atm")
-                         .withNewTo()
-                            .withKind("Service")
-                            .withName("nginx-service")
-                         .endTo()
-                        .endSpec()
-                        .done();
-
-                System.out.println("****CREATE ROUTE END**************************");
-
-
+            OpenShiftClient osClient = getOpenShiftClient("developer", "developer", "");
+            System.out.println("****CREATE DEPLOYMENTCONFIG**************************");
+             osClient.deploymentConfigs().create(DeploymentFacade.createDeplymentConfig(PROSJEKTNAVN,DEPLOYMENTCONFIG_NAME,IMAGE_NAME,APP_NAME,PORT,API_VERSION));
+             System.out.println("****CREATE SERVICE**************************");
+             osClient.services().create(DeploymentFacade.createService(PROSJEKTNAVN,PORT,TARGET_PORT,TARGET_PORT_PROTOCOL,APP_NAME,API_VERSION));
+             System.out.println("****CREATE ROUTE**************************");
+             //https://docs.openshift.org/latest/dev_guide/routes.html
+             osClient.routes().create(DeploymentFacade.createRoute(PROSJEKTNAVN,APP_NAME,KJORE_MILJO,TARGET_PORT,TARGET_PORT_PROTOCOL,API_VERSION));
         } catch (Exception e) {
             System.out.println("*****deployment_nginx_Test***************ERROR" + e.getMessage());
         }
