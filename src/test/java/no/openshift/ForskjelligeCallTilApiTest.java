@@ -3,9 +3,13 @@ package no.openshift;
 import io.fabric8.kubernetes.api.model.*;
 import io.fabric8.kubernetes.client.Config;
 import io.fabric8.kubernetes.client.ConfigBuilder;
-import io.fabric8.kubernetes.client.DefaultKubernetesClient;
-import io.fabric8.kubernetes.client.KubernetesClient;
-import io.fabric8.openshift.api.model.*;
+import io.fabric8.kubernetes.client.KubernetesClientException;
+import io.fabric8.kubernetes.client.Watcher;
+import io.fabric8.openshift.api.model.DeploymentConfig;
+import io.fabric8.openshift.api.model.DeploymentConfigBuilder;
+import io.fabric8.openshift.api.model.DeploymentConfigList;
+import io.fabric8.openshift.api.model.ProjectRequest;
+import io.fabric8.openshift.client.DefaultOpenShiftClient;
 import io.fabric8.openshift.client.OpenShiftClient;
 import org.junit.Assert;
 import org.junit.Test;
@@ -106,46 +110,71 @@ public class ForskjelligeCallTilApiTest {
         String IMAGE_NAME = "nginx:1.13.7";
         String APP_NAME = "nginx";
         int PORT =8083;
-        int EXPOSED_PORT =8083;
+        int EXPOSED_PORT =8085;
 
 
         OpenShiftClient osClient = getOpenShiftClient("developer", "developer", "");
 
+        osClient.events().inNamespace(PROSJEKTNAVN).watch(new Watcher<Event>() {
+            public void eventReceived(Action action, Event resource) {
+                System.out.println("event " + action.name() + " " + resource.toString());
+            }
+
+            public void onClose(KubernetesClientException cause) {
+                System.out.println("Watcher close due to " + cause);
+            }
+        });
+
         try {
-            DeploymentConfig deploymentConfig =
-                    osClient.deploymentConfigs()
+                  osClient.deploymentConfigs()
                             .create(NginxDeployment
                                     .createDeplymentConfig(
                                             PROSJEKTNAVN,DEPLOYMENTCONFIG_NAME,
                                             IMAGE_NAME,
                                             APP_NAME));
-            DeploymentConfigStatus deploymentConfigStatus= deploymentConfig.getStatus();
             System.out.println("****CREATE DEPLOYMENTCONFIG DONE**************************");
-            System.out.println(deploymentConfigStatus);
-            System.out.println("****CREATE SERVICE DONE**************************");
-            try {
+
+            System.out.println("****CREATE SERVICE START**************************");
+
                 osClient.services()
                         .createNew()
                         .withApiVersion("v1")
-                            .withNewMetadata()
+                        .withNewMetadata()
                                 .withName("nginx-service")
                                 .withNamespace(PROSJEKTNAVN)
                             .endMetadata()
                         .withNewSpec()
                         .addToSelector("app", APP_NAME)
                         .addNewPort()
+                            .withName("nginx-service-port")
                             .withProtocol("TCP")
                             .withPort(PORT)
-                            .withNewTargetPort("8085")
+                            .withNewTargetPort(EXPOSED_PORT)
                         .endPort()
                         .endSpec()
                         .done();
+                System.out.println("****CREATE SERVICE DONE**************************");
 
-                        //.setApiVersion("v1")
+                System.out.println("****CREATE ROUTE START**************************");
+                //https://docs.openshift.org/latest/dev_guide/routes.html
+                osClient.routes()
+                        .createNew()
+                        .withApiVersion("v1")
+                        .withNewMetadata()
+                            .withName("nginx-route")
+                            .withNamespace(PROSJEKTNAVN)
+                            .addToLabels("app","nginx")
+                        .endMetadata()
+                        .withNewSpec()
+                         .withPath("/atm")
+                         .withNewTo()
+                            .withKind("Service")
+                            .withName("nginx-service")
+                         .endTo()
+                        .endSpec()
+                        .done();
 
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+                System.out.println("****CREATE ROUTE END**************************");
 
 
         } catch (Exception e) {
@@ -358,9 +387,9 @@ public class ForskjelligeCallTilApiTest {
             config.setPassword(passord);
 
         }
-        KubernetesClient kubernetesClient = new DefaultKubernetesClient(config);
-        OpenShiftClient client = kubernetesClient.adapt(OpenShiftClient.class);
-        return client; //new DefaultOpenShiftClient(config);
+        //KubernetesClient kubernetesClient = new DefaultKubernetesClient(config);
+        //OpenShiftClient client = kubernetesClient.adapt(OpenShiftClient.class);
+        return new DefaultOpenShiftClient(config);
 
     }
 
